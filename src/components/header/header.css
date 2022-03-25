@@ -1,0 +1,158 @@
+.header{
+    position: fixed;
+    background:white;
+    width: 100%;
+    height:5em;
+    z-index: 1000;
+    top: 0px;
+}
+
+.logo{
+    font-family: 'Hurricane', cursive;
+    font-size:30px;
+    cursor: pointer;
+}
+
+.header-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+.header-list ul{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.header-list ul li{
+    padding: 10px 15px;
+    cursor: pointer; 
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    position: relative;
+    margin-left: 20px;
+    margin-right:20px;
+}
+
+.header-icons{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.shopingcart{
+    margin-right: 12px;
+}
+
+.header-list ul li::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.header-list ul li::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.header-list ul li::before{
+    transform: scale(0,1);
+    transition: transform ease-out 250ms;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.header-list ul li::after{
+    transform: scale(1,0);
+    transition: transform ease-out 250ms;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.header-list ul li:hover::before{
+    transform: scale(1.07,1);
+}
+
+.header-list ul li:hover::after{
+    transform: scale(1,1.07);
+}
+
+.header-navicon{
+    display: none;
+    font-size: 25px;
+}
+
+.navbar{
+    position:fixed;
+    top:0;
+    bottom:0;
+    right:0;
+    background-color:white;
+    width:150px;
+    margin-right:-10em;
+    z-index:2;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    text-align:start;
+    font-family: 'Poppins', sans-serif;
+    transition: all ease-out 250ms;
+}
+
+.navbar .nav-active{
+    width:150px;
+    margin-right:0em;
+}
+
+.navbar ul{
+    list-style: none;
+    margin-top: 4em;
+}
+
+.navbar ul li{
+    padding:12px 10px;
+}
+
+.navbar ul li:hover{
+    background:black;
+    color: white;
+    border-radius: 5px;
+}
+
+.close-icon{
+    position:absolute;
+    right:1.5em;
+    top: 1.5em;
+}
+
+
+@media screen and (max-width:600px) {
+    .header-list{
+        display: none;
+    }
+
+    .header-navicon{
+        display: block;
+    }
+
+    .header-flex{
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+}
+

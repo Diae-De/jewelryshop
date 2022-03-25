@@ -1,0 +1,104 @@
+.grid-workshop-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.workShop{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1.5rem;
+    align-items: center;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 3em;
+}
+
+.grid-workshop-img{
+    display: flex;
+    margin-top: 2em;
+    width: 40%;
+}
+
+.grid-workshop-img img:last-child{
+    margin-left: 10em;
+}
+
+.flex-workshop-img img{
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+}
+
+.workshop-para h1{
+    font-family: 'Noto Serif Display', serif;
+    font-size:3em;
+}
+
+.workshop-para p{
+    font-family: 'Poppins', sans-serif;
+    font-size:1em;
+    width:50%;
+    margin-top: 2em;
+}
+
+@media screen and (max-width:1024px) {
+    .workshop-para p{
+        width:80%;
+    }
+
+    .flex-workshop-img img{
+        width: 80%;
+    }
+
+    .grid-workshop-img img:last-child{
+        margin-left: 5em;
+    }
+}
+
+@media screen and (max-width:820px) {
+    .workShop{
+        margin-top: 20em;
+    }
+
+    .workshop-para p{
+        width:100%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .flex-workshop-img img{
+        display:none;
+    }
+
+    .workShop{
+        grid-template-columns: repeat(1,1fr);
+        margin-top: 3em;
+    }
+
+    .grid-workshop-img img:last-child{
+        margin-left: 2em;
+    }
+
+    .workshop-para h1{
+        font-size:2.5em;
+    }
+
+    .workshop-para p{
+        font-size:0.8em;
+    }
+}
+
+@media screen and (max-width:375px){
+    .workShop{
+       margin-top: 15em;
+    }
+}
+
+
+
+
