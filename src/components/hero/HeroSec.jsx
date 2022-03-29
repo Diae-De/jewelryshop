@@ -3,6 +3,7 @@ import './heroSec.css'
 import {Data} from './HeroData'
 import {motion} from 'framer-motion'
 import {MdOutlineArrowForwardIos} from 'react-icons/md'
+import Fade from 'react-reveal/Fade';
 
 function HeroSec() {
 
@@ -17,6 +18,7 @@ function HeroSec() {
     <div className="HeroSec">
         <div className="mainslid">
         <div className="mostpopular">most popular</div>
+        <Fade top>
         <motion.div ref={corsor} drag="x" dragConstraints={{right:0, left:-width}} className="cursor">
             {Data.map((alldata,index) => {
                 return(
@@ -34,6 +36,7 @@ function HeroSec() {
             <p>See More</p>
             <MdOutlineArrowForwardIos/>
         </div>
+        </Fade>
     </div>
     </div>
 </>

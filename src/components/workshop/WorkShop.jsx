@@ -1,9 +1,11 @@
 import React from 'react'
 import './workShop.css'
+import Slide from 'react-reveal/Slide';
 
 function WorkShop() {
   return (
     <div className="workShop">
+        <Slide bottom>
         <div className="flex-workshop">
             <div className="workshop-para">
                 <h1>WORKSHOP</h1>
@@ -19,6 +21,7 @@ function WorkShop() {
         <div className="flex-workshop-img">
             <img src="/images/workshop1.jpg"/>
         </div>
+        </Slide>
     </div>
   )
 }

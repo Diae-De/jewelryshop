@@ -3,6 +3,7 @@ import './header.css'
 import {AiOutlineShopping, AiOutlineSearch} from 'react-icons/ai'
 import {BsList} from 'react-icons/bs'
 import {GrClose} from 'react-icons/gr'
+import Slide from 'react-reveal/Slide';
 
 function Header() {
 
@@ -15,6 +16,7 @@ function Header() {
   return (
     <div className="header">
     <div className="header-flex">
+    <Slide top>
         <div className="logo">PJ</div>
         <div className="header-list">
             <ul>
@@ -30,7 +32,7 @@ function Header() {
         <div className="header-navicon">
           <BsList onClick={tooglenav}/>
         </div>
-
+        </Slide>
         <div className="navbar">
           <div className={navStatue ? "navbar nav-active" : "navbar"}>
             <ul>
